@@ -47,7 +47,7 @@ const TinderCards = () => {
  
     return(
         <div>
-          <h1>i am a tinder card</h1>
+  
           <div className={classes['tinderCards__cardContainer']}>
           {people.map(person => (
             <TinderCard

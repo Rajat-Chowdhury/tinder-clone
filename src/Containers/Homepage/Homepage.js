@@ -7,8 +7,8 @@ class Homepage extends Component {
     render(){
         return(
             <Fragment>
-                <TinderCards/>
-                <SwipeButtons/>
+                <TinderCards />
+                <SwipeButtons />
             </Fragment>
                 
             

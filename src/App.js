@@ -5,20 +5,23 @@ import {BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import Header from './Components/Header/Header';
 import Homepage from './Containers/Homepage/Homepage';
+import Chatpage from './Containers/Chatpage/Chatpage';
 
 function App() {
   return (
     <div className="App">
      
       <BrowserRouter>
-        <Header/>
+        
         <Switch>
           <Route path="/chat">
+            <Header backButton="/" />
             <h1>I am a chat page</h1>
+            <Chatpage/>
           </Route>
         
           <Route path="/">
-            <h1>I am a homepage</h1>
+            <Header/>
             <Homepage/>
           </Route>
         </Switch>
