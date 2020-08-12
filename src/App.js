@@ -14,7 +14,7 @@ function App() {
       <BrowserRouter>
         
         <Switch>
-          <Route path="/chat">
+          <Route path="/chats">
             <Header backButton="/" />
             <h1>I am a chat page</h1>
             <Chatpage/>

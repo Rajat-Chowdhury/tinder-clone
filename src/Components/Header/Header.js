@@ -42,7 +42,7 @@ const Header = (props) => {
             
             
             
-            <NavLink to="/chat">
+            <NavLink to="/chats">
                 <IconButton>
                     <ForumIcon 
                     className={classes['header__icon']}
