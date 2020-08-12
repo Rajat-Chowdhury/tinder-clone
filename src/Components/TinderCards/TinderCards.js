@@ -26,6 +26,7 @@ const TinderCards = () => {
     return(
         <div>
           <h1>i am a tinder card</h1>
+          <div className={classes['tinderCards__cardContainer']}>
           {people.map(person => (
             <TinderCard
             className={classes['swipe']}
@@ -37,7 +38,10 @@ const TinderCards = () => {
                     <h3>{person.name}</h3>
                 </div>
             </TinderCard>
-          ))}  
+          ))}
+
+          </div>
+           
         </div>
     )
 
