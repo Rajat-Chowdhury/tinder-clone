@@ -1,12 +1,17 @@
-import React, { Component } from 'react';
+import React, { Component, Fragment } from 'react';
 
 
 import TinderCards from '../../Components/TinderCards/TinderCards';
-
+import SwipeButtons from '../../Components/SwipeButtons/SwipeButtons';
 class Homepage extends Component {
     render(){
         return(
-            <TinderCards/>
+            <Fragment>
+                <TinderCards/>
+                <SwipeButtons/>
+            </Fragment>
+                
+            
         )
     }
 
