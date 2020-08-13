@@ -6,6 +6,7 @@ import {BrowserRouter, Switch, Route } from 'react-router-dom';
 import Header from './Components/Header/Header';
 import Homepage from './Containers/Homepage/Homepage';
 import Chatpage from './Containers/Chatpage/Chatpage';
+import ChatScreen from './Containers/ChatScreen/ChatScreen';
 
 function App() {
   return (
@@ -14,12 +15,14 @@ function App() {
       <BrowserRouter>
         
         <Switch>
+          <Route path="/chats/:person">
+            <Header backButton="/chats" />
+            <ChatScreen />
+          </Route>
           <Route path="/chats">
             <Header backButton="/" />
-            <h1>I am a chat page</h1>
             <Chatpage/>
           </Route>
-        
           <Route path="/">
             <Header/>
             <Homepage/>
