@@ -55,7 +55,7 @@ const TinderCards = () => {
             preventSwipe={['up' , 'down']}
             key={person.url}>
                 <div 
-                    style={{backgroundImage: `url(${person.url})`}}
+                    style={{backgroundImage: `url(${person.url})` , display: 'flex', backgroundPosition:'center top' }}
                     className={classes['card']}>
                     <h3>{person.name}</h3>
                     
