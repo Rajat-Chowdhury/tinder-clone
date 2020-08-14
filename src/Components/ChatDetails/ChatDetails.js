@@ -24,16 +24,23 @@ const ChatDetails = ( ) => {
 
     return(
         <div className="chatDetails">
-            <h2>Chat details screen</h2>
-            <p>You matched with Bruce on 23/ 5/ 2020</p>
+            <p className="chatDetails__timestamp">You matched with Bruce on 23/ 5/ 2020</p>
             {messages.map(message => (
-                <div className="chatDetails__message">
-                    <Avatar 
-                    className="chatScreen__image" 
-                    alt={message.name}
-                    src={message.image}   />
-                    <p>{message.message}</p>
-                </div>
+                message.name ?
+                (
+                  <div className="chatDetails__message">
+                      <Avatar 
+                      className="chatScreen__image" 
+                      alt={message.name}
+                      src={message.image}   />
+                      <p className="chatDetails__text">{message.message}</p>
+                  </div>
+                )
+                :(
+                    <div className="chatDetails__message">
+                        <p className="chatDetails__textUser">{message.message}</p>
+                    </div>
+                )
             ))}
 
         </div>
