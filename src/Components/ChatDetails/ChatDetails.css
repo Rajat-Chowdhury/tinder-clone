@@ -26,3 +26,36 @@
    color: white;
 }
 
+.chatDetails__send{
+    color:#ec5e6f;
+   
+}
+
+.chatDetails__input{
+    display: flex;
+    padding: 5px;
+    position:fixed;
+    bottom: 0;
+    width: 100%;
+    border-top: 1px solid lightgrey;
+}
+
+.chatDetails__inputField{
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: #fafafa;
+    border-radius: 20px;
+    margin: 0 10px;
+}
+
+.chatDetails__inputField:focus{
+    outline: none !important;
+}
+
+.chatDetails__inputButton{
+    border: none;
+    margin-right: 20px;
+    background-color:white;
+    
+}

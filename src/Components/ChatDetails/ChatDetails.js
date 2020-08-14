@@ -3,8 +3,12 @@ import React, { useState } from 'react';
 import './ChatDetails.css';
 
 import Avatar from '@material-ui/core/Avatar';
+import IconButton from '@material-ui/core/IconButton';
+import SendIcon from '@material-ui/icons/Send';
 
 const ChatDetails = ( ) => {
+
+    const[input,setInput] = useState('');
 
     const  [messages, setMessages] = useState([
         {
@@ -22,6 +26,12 @@ const ChatDetails = ( ) => {
         }
     ])
 
+    const inputSendHandler = (event) =>{
+       event.preventDefault(); 
+       setMessages([...messages, {message : input}]);
+       setInput("");
+    }
+
     return(
         <div className="chatDetails">
             <p className="chatDetails__timestamp">You matched with Bruce on 23/ 5/ 2020</p>
@@ -30,7 +40,7 @@ const ChatDetails = ( ) => {
                 (
                   <div className="chatDetails__message">
                       <Avatar 
-                      className="chatScreen__image" 
+                      className="chatDetails__image" 
                       alt={message.name}
                       src={message.image}   />
                       <p className="chatDetails__text">{message.message}</p>
@@ -42,6 +52,29 @@ const ChatDetails = ( ) => {
                     </div>
                 )
             ))}
+            
+            <form className="chatDetails__input">
+                <input 
+                value={input}
+                onChange={event => setInput(event.target.value)}
+                className="chatDetails__inputField"
+                type="text" 
+                placeholder="Type a message" />
+                <button 
+                onClick={inputSendHandler}
+                className="chatDetails__inputButton"
+                type= "submit" > 
+                    <IconButton>
+                    <SendIcon
+                    className="chatDetails__send"
+                    fontSize="large"
+                    />
+
+                    </IconButton>
+                </button>
+            </form>
+            
+
 
         </div>
     );

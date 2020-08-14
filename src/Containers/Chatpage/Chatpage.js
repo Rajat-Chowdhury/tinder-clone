@@ -32,7 +32,7 @@ class Chatpage extends Component {
                     timestamp = "1 hour ago"
                     profilePic="https://wallpapercave.com/wp/wp1869876.jpg"
                 />
-                <h1>I am an individual chat </h1>
+                
             </div>
         )
     }
